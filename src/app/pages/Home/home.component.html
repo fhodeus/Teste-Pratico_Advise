@@ -1,0 +1,35 @@
+<div class="page-home">
+    <app-header></app-header>
+    <main class="home-container">
+        <section>
+            <div class="section-header">
+                <div class="home-title">
+                    <h1 class="title">Fase teste prático Front_end </h1>
+                    <h2 class="subtitle">Pokebusca</h2>
+                </div>
+                <div class="search-container">
+                    <form (submit)="onSubmit($event)">
+                        <input (change)="onChange($event)" value={{PokemonName}} type="text" placeholder="Buscar" />
+                        <button type="submit" class="icon-search"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="showing-content">
+                    <span> Exibindo {{(currentPage * 5) -4}} ~ {{currentPage * 5 < data.results.length ?currentPage * 5 : data.results.length}} de {{data.results.length}} itens </span>
+                </div>
+                <div class="show-content">
+                    <app-pokemon-list [pagina]="currentPage" [pokemonResults]="data.results"></app-pokemon-list>
+                </div>
+            </div>
+            <div class="section-footer">
+                <span class="counter-page"> {{currentPage }} de {{maxPages}} páginas</span>
+                <img [class.disable] = "currentPage === 1" src="/assets/First-Page.svg" (click)="setPage(1)">
+                <img [class.disable] = "currentPage === 1" src="/assets/Prev-Page.svg" (click)="setPage(currentPage - 1)" />
+                <img [class.disable] = "currentPage === maxPages" src="/assets/Next-Page.svg" (click)="setPage(currentPage + 1)"/>
+                <img [class.disable] = "currentPage === maxPages"src="/assets/Last-Page.svg" (click)="setPage(maxPages)"/>
+            </div>
+        </section>
+    </main>
+    <app-footer></app-footer>
+</div>

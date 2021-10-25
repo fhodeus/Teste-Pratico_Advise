@@ -1,0 +1,49 @@
+<div class="page-pokedex">
+    <app-header></app-header>
+    <main class="pokedex-container">
+        <section >
+            <div class="pokedex">
+                <div class="pokedex-header">
+                    <div class="pokedex-circle"></div>
+                    <div class="pokedex-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                </div>
+                <div class="pokedex-content">
+                    <div class="pokedex-dots">
+                        <div class="dot red"></div>
+                        <div class="dot red"></div>
+                    </div>
+                    <div class="pokedex-image-container">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png" alt="Pokemon imag"
+                            onerror="this.onerror=null;this.src='/assets/MissingNo.png';" />
+                    </div>
+                    <div class="pokedex-dots space-around">
+                        <div class="dot red"></div>
+                        <div class="grade"></div>
+                    </div>
+                </div>
+                <div class="pokedex-buttons">
+                    <div class="pokedex-dots ">
+                        <div class="dot button black"></div>
+                    </div>
+                    <div class="midle">
+                        <div class="flat-buttons">
+                            <div class="button red"></div>
+                            <div class="button blue"></div>
+                        </div>
+                        <div class="screen"></div>
+                    </div>
+                    <div class="direcional-button"></div>
+                </div>
+            </div>
+            <div class="pokemon-info">
+                <h1>{{pokemon.name}} #{{pokemon.id}}</h1>  
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien ipsum, blandit at fermentum in, aliquam ultricies dui. Phasellus ut sollicitudin ligula. Nulla a tincidunt velit, eu rhoncus nibh. Phasellus ac consectetur sapien. In vulputate fringilla rhoncus. Cras a velit enim. Maecenas tristique tincidunt orci ut ornare. Mauris elementum augue quis libero tincidunt, dictum sagittis ipsum venenatis. Sed sed magna sit amet eros tincidunt congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur mattis felis eu convallis commodo. Integer congue sodales fringilla.</p>
+            </div>
+        </section>
+    </main>
+    <app-footer></app-footer>
+</div>

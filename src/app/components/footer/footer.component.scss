@@ -1,0 +1,12 @@
+.footer-component{
+    min-height: 31px;
+    background: #020202;
+    width: 100%;
+}
+
+@media only screen and (max-width: 667px) {
+    .footer-component{
+        min-height: 92px;
+    }
+}
+

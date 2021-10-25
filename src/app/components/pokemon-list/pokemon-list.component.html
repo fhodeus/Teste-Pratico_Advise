@@ -1,0 +1,17 @@
+<ul class="pokemon-component">
+  <li *ngFor="let pokemon of pokemonShow">
+
+    <div class="img-container">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png"
+        alt="Pokemon imag" onerror="this.onerror=null;this.src='/assets/MissingNo.png';" />
+    </div>
+    <div class="pokemon-info">
+      <a routerLink="/pokedex" [queryParams]="{id:pokemon.id}">
+        <p>{{pokemon.name}} #{{pokemon.id}}</p>
+      </a>
+      <span>Características do pokemon dolor sit amet, consectetur adipiscing elit. In ultricies nunc at odio tempor
+        tincidunt. Sed sit amet dolor velit. Donec convallis tellus ut porta molestie. Suspendisse condimentum et dui in
+        aliquam.</span>
+    </div>
+  </li>
+</ul>

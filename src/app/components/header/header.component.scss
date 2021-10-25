@@ -1,0 +1,65 @@
+.component-header{
+    background: #020202;
+    color: #FFFFFF;
+    padding: 21px;
+    font-size: 21px;
+
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 90%;
+        margin: auto;
+        .header-user{
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            .user-link{
+                padding: 0 30px;
+                img{
+                    padding: 0px 0 2px 10px  ;
+                }
+            }
+            
+            ul{
+                display: none;
+                
+                position: absolute;
+                top :25px;
+
+                background: #f1f9f9;
+                color: #020202;
+                width: 100%;
+                min-height: 400px;
+
+                padding: 28px;
+                border-radius: 4px;
+
+                z-index: 9;
+            }
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 667px) {
+    .component-header{
+        .header-container{
+            width: 100%;
+            .header-user{
+                .user-link{
+                   padding: 0;
+                   font-size: 14px;
+                }        
+            }
+        }
+    }
+  }
