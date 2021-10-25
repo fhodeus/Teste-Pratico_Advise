@@ -57,6 +57,8 @@ export class HomeComponent implements OnInit, OnChanges {
     this.PokeApiService.getPokeApibyName(this.PokemonName).subscribe((response: Pokemon) => {
       this.data.results = [response];
       this.maxPages = 1
+      this.currentPage = 1
+      
     })
     e.preventDefault()
   }

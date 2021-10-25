@@ -161,3 +161,26 @@
         }
     }
 }
+
+@media only screen and (max-width: 667px) {
+    .page-pokedex{
+   
+        .pokedex-container{
+            section{
+                flex-direction:column ;
+                align-items: center;
+            }
+            .pokemon-info{
+                width:90%;
+                h1{
+                    text-align: center;
+                    margin-top: 28px;
+                }
+                p{
+                    max-width: unset;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
